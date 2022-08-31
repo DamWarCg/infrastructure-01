@@ -28,4 +28,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd azure-cli/session-07
+          chmod +x script2.sh
           ./script2.sh
