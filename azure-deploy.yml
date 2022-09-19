@@ -10,8 +10,14 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+  - task: AzureCLI@2
+    inputs:
+      azureSubscription: 'Azure'
+      scriptType: 'bash'
+      scriptLocation: 'inlineScript'
+      inlineScript: 'az config set defaults.group=infrastructure-01'
+  
   - script: |
-      az config set defaults.group=infrastructure-01
       cd azure-cli
       cd session-07
       chmod 755 script2.sh
