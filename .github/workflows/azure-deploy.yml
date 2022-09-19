@@ -33,5 +33,7 @@ jobs:
         run:  |
               cd azure-cli
               cd session-07
+              chmod 755 script2.sh
               ./script2.sh
+              chmod 755 script3.sh
               ./script3.sh
