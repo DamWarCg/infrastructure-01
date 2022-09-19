@@ -30,7 +30,7 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Deploy from scripts
-      - run:  |
+        run:  |
               cd azure-cli
               cd session-07
               ./script2.sh
