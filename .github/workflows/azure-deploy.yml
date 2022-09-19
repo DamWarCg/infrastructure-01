@@ -31,6 +31,7 @@ jobs:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Deploy from scripts
         run:  |
+              az config set defaults.group=infrastructure-01
               cd azure-cli
               cd session-07
               chmod 755 script2.sh
